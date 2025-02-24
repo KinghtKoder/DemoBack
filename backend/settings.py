@@ -79,10 +79,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'stu',  # Change this if your database name is different
+        'USER': 'yashgami',
+        'PASSWORD': 'yashgami',
+        'HOST': 'localhost',  # Use the correct host (or Railway DB URL in production)
+        'PORT': '5434',  # Your PostgreSQL port
     }
 }
+
 
 
 # Password validation
